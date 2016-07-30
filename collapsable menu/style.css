@@ -10,27 +10,39 @@ body{
 }
 
 .nav-bar{
-	min-height: 10vh;
+	height: 70px;
 	background-color: purple;
 	text-align: center;
-	padding: 3vh 0px;
 	position: relative;
+	padding: 10px 0px;
+	opacity: .8;
+}
+
+.nav-bar:hover{
+	opacity: 1;
 }
 
 .links{
 	visibility: hidden;
 	font-size: 2em;
 	color:white;
-	padding: 0px 3vh;
+	width: 90%;
+	margin: auto;
+	display: block;
 }
 
 .links:hover{
 	background-color: white;
 	color:black;
+	box-sizing: content-box;
+	border:1px solid black;
 }
 
 .active{
 	visibility: visible;
+	opacity: 1;
+	background-color: white;
+	color:black;
 }
 #menu-icon{
 	width: 50px;

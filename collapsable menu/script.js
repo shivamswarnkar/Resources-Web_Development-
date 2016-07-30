@@ -1,8 +1,9 @@
 
 var isOpen = false;
-var initi = Array();
+var mainH;
 
 function menu(){
+	var nav_bar = document.getElementsByClassName("nav-bar")[0];
 	if(!isOpen){
 		document.getElementById("menu-icon").style.backgroundColor = "white"; 
 		var links = document.getElementsByClassName("links");
@@ -12,11 +13,13 @@ function menu(){
 			curr = document.getElementById("menu-"+i);
 			curr.style.visibility = "Visible";
 			curr.style.width = "100%;";
-			initi[i] = curr.innerHTML;
-			curr.innerHTML += "<br />";
 			//sleep(1000);
 
 		}
+		
+		mainH = nav_bar.style.height;
+		nav_bar.style.height = "210px";
+
 		isOpen  = true;
 	}
 
@@ -28,13 +31,11 @@ function menu(){
 		for(var i=1; i < links.length; ++i){
 			curr = document.getElementById("menu-"+i);
 			curr.style.visibility = "hidden";
-			curr.innerHTML = initi[i];
 		}
 		isOpen  = false;
+		nav_bar.style.height = mainH;
 
 	}
-	console.log("here");
-
 }
 
 
